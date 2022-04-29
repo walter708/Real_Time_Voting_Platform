@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CandidVote : Registration</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="./src/style.css" />
+        <!--font awesome cnd link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">Registration</div>
+            <form action="#" id ="registerForm">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Firstname</span>
+                        <input type="text" placeholder="eg John" id ="firstname" class="registerField" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Lastname</span>
+                        <input type="text" placeholder="Doe" id ="lastname" class="registerField" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Current Residence Address</span>
+                        <input type="text" placeholder="225B Cederbrae Avenue" id ="address" class="registerField"  required>
+                    </div>
+
+                    <div class="input-box">
+                        <div class="cover">
+                            <div class="selector">
+                                <span class="selector_label">Province</span>
+                                <select name="province" id="province" class="registerField selector_style">
+                                    <!-- <option value="option">Option </option> -->
+                                    <option value="Ontario">Ontario</option>
+                                    <option value="Manitoba">Manitoba</option>
+                                    <option value="British Coloumbia">British Coloumbia</option>
+                                    <option value="Québec">Québec</option>
+                                    <option value="Saskatchewan">Saskatchewan</option>
+                                    <option value="Alberta">Alberta</option>
+                                    <option value="Yukon">Yukon</option>
+                                    <option value="Northwest Territories">Northwest Territories</option>
+                                    <option value="Nunavut">Nunavut</option>
+                                    <option value="New Brunswick">New Brunswick</option>
+                                    <option value="Nova Scotia">Nova Scotia</option>
+                                    <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                                    <option value="Prince Edward Island">Prince Edward Island</option>
+                                </select>
+                            </div>
+
+                            <div class="selector">
+                                <span class="selector_label">City</span>
+                                <input type="text" placeholder="eg Waterloo" id ="city" class="registerField" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="input-box"> -->
+                        <div class="selector">
+                            <span class="details">Registering As</span>
+                            <select name="authLevel" id="authLevel" class="registerField selector_style">
+                                <!-- <option value="option">Option</option> -->
+                                <option value="voter">Voter</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                    <!-- </div> -->
+
+                    <div class="input-box">
+                        <span class="details">Telephone</span>
+                        <input type="tel" placeholder="Mobile Number" id="phoneNumber" class="registerField" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Zipcode</span>
+                        <input type="text"  placeholder="" id="zipCode" class="registerField" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Birth Date</span>
+                        <input type="date" placeholder="DD/MM/YYYY" id="dateOfBirth" class="registerField" required>
+                    </div>
+                </div>
+
+                <div class="gender-details">
+                    <span class="gender-title">Gender</span>
+                    <input value="male" type="radio" name="gender" id="dot-1" class="registerField" >
+                    <input value="female" type="radio" name="gender" id="dot-2" class="registerField" >
+                    <input checked value="prefer not to say" type="radio" name="gender" id="dot-3" class="registerField" >
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Prefer not to say</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <p id="errorMessage">
+                        Email already exists!
+                    </p>
+
+                    <input type="submit" value="Register" id="registerButton">
+                </div>
+            </form>
+        </div>
+        <script type="module" src="./src/registration.js"></script>
+    </body>
+</html>

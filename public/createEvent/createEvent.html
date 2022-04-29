@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CandidVote-Event</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+
+  <body>
+    <nav class = "nav">
+      <div class="nav__nav-box">
+        <div class="nav__logo-box fas fa-vote-yea" id ="navigation"></div>
+        <div class="nav__logout" id ="log_out">
+          <span class = "logout_text">Logout</span>
+        </div>
+    </div>
+    </nav>
+    
+    
+    
+    <div class="container">
+      <div class="title">Create Event</div>
+      <form action="#" id ="eventForm">
+        <div class="event-details">
+          
+          <div class="input-box">
+            <span class="details">Event Name</span>
+            <input type="text" placeholder="eg John" id="eventName" class ="eventField" required>
+          </div>  
+           
+          <div class="input-box">
+            <span class="details">Organization Tag</span>
+            <input type="text" placeholder="eg John" id="votersTag" class ="eventField" required>
+          </div> 
+           
+          <div class="input-box">
+            <span class="details">Start Date</span>
+            <input type="date" placeholder="DD/MM/YYYY" id="startDate" class ="eventField" required>
+          </div>  
+           
+          <div class="input-box">
+            <span class="details">End Date</span>
+            <input type="date" placeholder="DD/MM/YYYY" id="endDate" class ="eventField" required>
+          </div>  
+           
+          <div class="input-box">
+            <span class="details">Description</span>
+            <textarea id="eventDescription" name="" rows="4" cols="50" class ="eventField" required >
+            </textarea>
+          </div>  
+           
+        </div>
+        
+        <div class="candidate-details">  
+          <span class="user">click icon to add candidates</span>
+          <label for="add" class=" icon fas fa-user-plus"></label>
+        </div> 
+        
+        <div id="candidates"></div>
+        
+        <div class="button">
+          <input type="submit" id="createEventButton" value="Create">
+        </div>
+
+      </form>
+    
+      <input type="checkbox" name="" id="add">
+      <div class="candidate_sec">
+        <div class="relative">
+
+          <div class="main">
+            <label for="add"  class="close-btn fas fa-times" title="close" ></label>
+            <h1 class="text">Add Candidate</h1>
+
+            <form action="#" id ="candidateForm">
+              <div class="data">
+                <label >Full Name</label>
+                <input type="text" name="" id="candidateName" placeholder="Enter Candidates Name" class ="candidateField" required>
+              </div> 
+
+              <div class="data">
+                <label >Email</label>
+                <input type="email" name="" id="candidateEmail" placeholder="Enter Candidates Email" class ="candidateField" required>
+              </div>
+                                 
+              <div class="data">
+                <label >Affiliation</label>
+                <input type="text" name="" id="candidateParty" placeholder="Enter Candidates Party" class ="candidateField" required>
+              </div>
+
+              <div class="data">
+                <label >Description</label>
+                <textarea id="candidateDescription" name="" rows="3" cols="40"  class ="candidateField" required>
+                </textarea>
+              </div>  
+                                 
+              <div class="btn">
+                <button type="submit" id="createCandidateButton" >Add</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="createEvent.js" async defer></script>
+  </body>
+</html>
